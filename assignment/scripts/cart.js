@@ -20,6 +20,18 @@ console.log('Adding Crackers:', addItem('Crackers'));
 console.log('Adding Wine:', addItem('Wine'));
 console.log(`Basket is now ${basket}`);
 
+// Create a function named listItems that will loop over the items in our basket.
+function listItems() {
+    for (let i = 0; i <= basket.length -1; i++) {
+        console.log(basket[i]);
+    }
+
+};
+listItems();
+console.log('Inside the listitems function:', basket.length);
+
+// Create a function named empty that should rest the basket to an empty array.
+
 
 
 
