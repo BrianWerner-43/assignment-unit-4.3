@@ -50,7 +50,6 @@ console.log('------Stretch Goals------');
 
 // Create a function named isFull that should return false if the basket is less than maxItems.
 // and return true otherwise if greater or equal to maxItems.
-
 function isFull() {
     if (basket.length < maxItems) {
         return false;
@@ -61,6 +60,44 @@ function isFull() {
 };
 
 console.log('Inside the isFull function:', isFull());
+
+// Create a function named removeItem and it should take in an input parameter for a string item
+// Use array.indexOf to find the index of the first matching item in the basket array
+// Use array.splice to remove the matching item
+// Also have the function return null if matching item wasn't found.
+
+// function removeItem(item) {
+//     let basket = ['Blackberries', 'Delice de Bourgogne', 'Salami', 'Crackers', 'Wine'];
+//     let index = basket.indexOf();
+//     if (index === -1) {
+//         let removedItem = basket.splice(0);
+//         return removedItem[0];
+//     } else {
+//         return null;
+//     }
+// };
+
+// console.log('Inside the remove function:', removeItem('Blackberries'));
+// let basket = ['Blackberries', 'Delice de Bourgogne', 'Salami', 'Crackers', 'Wine'];
+
+
+
+function removeItem(item) {
+    let basket = ['Blackberries', 'Delice de Bourgogne', 'Salami', 'Crackers', 'Wine'];
+    let index = basket.indexOf(item);
+    if (index !== -1) {
+        let removedItem = basket.splice(index, 1);
+        return removedItem[0];
+    } else {
+        return null;
+    }
+
+};
+console.log('Inside the removeItem function(should expect Blackberries):', removeItem('Blackberries'));
+
+
+
+
 
 
 
